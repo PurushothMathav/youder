@@ -4,7 +4,7 @@ import subprocess
 import sys
 import os
 
-GITHUB_RAW_URL = "https://raw.githubusercontent.com/PurushothMathav/youder/refs/heads/main/youder.py"
+GITHUB_RAW_URL = "https://raw.githubusercontent.com/<username>/<repo>/main/script.py"
 
 print("Downloading the latest Youder source from GitHub...")
 response = requests.get(GITHUB_RAW_URL)
@@ -16,5 +16,6 @@ with tempfile.NamedTemporaryFile(delete=False, suffix=".py") as tmp_file:
 
 print(f"Running Youder from: {tmp_path}")
 subprocess.run([sys.executable, tmp_path])
+
 
 os.remove(tmp_path)
