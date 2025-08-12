@@ -1,10 +1,12 @@
+__author__ = 'Mr. Pangu'
+
 import requests
 import tempfile
 import subprocess
 import sys
 import os
 
-GITHUB_RAW_URL = "https://raw.githubusercontent.com/<username>/<repo>/main/script.py"
+GITHUB_RAW_URL = "https://gist.githubusercontent.com/PurushothMathav/d052714fa6a829d1d9502bf6063bf10d/raw/cde98241df6cd5028548afac52a81b5f2fb5ef70/youder_v2.py"
 
 print("Downloading the latest Youder source from GitHub...")
 response = requests.get(GITHUB_RAW_URL)
@@ -19,3 +21,4 @@ subprocess.run([sys.executable, tmp_path])
 
 
 os.remove(tmp_path)
+
